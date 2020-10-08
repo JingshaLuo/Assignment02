@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <script tpye="text/javascript">
+    function say_goodbye(){
+        document.querySelector("h1").innerHTML="Bye";
+        document.querySelector("#heading2").innerHTML="Bye again"
+        document.querySelector(".heading3").innerHTML="<span style='color:red'>Bye bye bye</span>";
+    }
+   
+       //  document.addEventListener('DOMContentLoaded',function(){
+          //  document.querySelector("button").onclick=inc;
+        // }); 和下文button onclike="inc()" 表示一样
+        
+     let counter=0
+     function inc(){
+         counter=counter+1;
+         document.querySelector("#score").innerHTML=`Score:${counter}`;
+
+         if(counter>=10){
+             counter=0
+             document.querySelector("#score").innerHTML="You Win !"
+         }
+     }
+
+    </script>
+
+    <title>Weclome to my Website</title>
+    </head>
+
+    <body>
+        <h1 style="color:pink;"onmouseover=hello()> Weclome ! </h1>
+        <h1 id="heading2"> Welcome agagin</h1>
+        <h1 class="heading3">Really Weclome</h1>
+        <button onclick="say_goodbye()">Click me</button>
+
+       
+        <h1 id="score"> Score:0</h1>
+        <button onclick="inc()">Click to score a point</button>
+
+       
+    </body>
+</html>

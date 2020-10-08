@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+
+				document.querySelectorAll('.change-color').forEach(function(button) {
+
+					button.onclick=function(){
+
+						document.querySelector('#style_me').style.color=button.dataset.color;
+					 
+				  }
+				}
+			)	 
+				
+
+				document.querySelector("#size_selector").onchange=function(){
+					document.querySelector('#style_me').style.fontSize=document.querySelector("#size_selector").value;
+				   }
+			});
+		 </script>
+	</head>
+
+
+	<body>
+		<h1 id ="style_me">Color me </h1>
+		<div>
+			<div id="color_selector">
+				<button class="change-color" data-answer="250" data-color="red">Red</button>
+				<button class="change-color"  data-color="gold">Gold</button>
+				<button class="change-color"  data-color="green">Green</button>
+				<button class="change-color"  data-color="blue">Blue</button>
+				
+			
+			</div>
+			<div>
+				<select id="size_selector"> 
+					<option value="small">Small</option>
+					<option value="medium">Medial</option>
+					<option value="large">Large</option>
+
+				</select>
+				
+
+			</div>
+		</div>	
+	</body>	
+</html> 

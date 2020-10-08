@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src ="javascript.js"></script>
+        <link rel="stylesheet"href="javascript.css">
+
+        <script>
+            function displayDate(){
+	            document.getElementById("demo").innerHTML=Date();
+            }
+
+
+            document.addEventListener('DOMContentLoaded',function() {
+
+                document.querySelector("#new-task").onsubmit = function(){
+
+                    const li = document.createElement('li');
+
+                      // remove
+                    let task_text=document.querySelector('#task').value;
+                    let new_task_html= `<span> ${task_text}</span> 
+                                        <button class="remove"> Remove </button>`;
+
+                    li.innerHTML = new_task_html
+                    // add
+                    document.querySelector("#tasks_list").append(li);
+
+                    document.querySelector("#task").value= '';
+
+                    return false;
+                }
+
+                document.addEventListener('click',function(event){
+                    element = event.target;
+                    if (element.className ==='remove'){
+                        element.parentElement.remove();
+                    }
+                })
+            });
+
+            function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert(" Please input your name");
+        return false;
+    }
+}
+      </script> 
+
+        <title> To Do List</title>
+
+ <hr>
+
+    </head>
+    <body>
+
+
+        <h1>This is my JavaScript </h1>
+        <p id="demo"> </p>
+
+         <button type="button" onclick="displayDate()">DisplayDate</button>
+
+         <button type="button" onclick="alert('Welcome')">Click Me</button>
+
+         <hr>
+         <h1 id="h1">My first JavaScript Assignment</h1>
+         <script>
+            document.getElementById("h1").style.color="red";
+            document.getElementById("h1").style.fontFamily="Arial";
+            document.getElementById("h1").style.fontSize="larger";
+            </script>
+             <p id="demo1"> Are you interest ? </p>
+             
+        <script>
+            
+           function myFunction1(){
+	         x=document.getElementById("demo1");  
+             x.innerHTML="Thank you ! &  Weclome !!!";  
+             document.getElementById("demo1").style.color="red"; 
+             document.getElementById("demo1").style.fontSize="larger" 
+            }
+        </script>
+         <button type="button" onclick="myFunction1()">Click Here</button>
+
+
+    <script>
+       function changeImage(){
+        element=document.getElementById('image')
+        if (element.src.match("bulbon")){
+            element.src="images/bulboff.gif";
+        }
+        else
+        {
+            element.src="images/bulbon.gif";
+        }
+    }
+    </script>
+    <img id="myimage" onclick="changeImage()" src="images/bulboff.gif" width="200" height="380" >
+
+    <hr>
+
+    <p> Let me brevity introduce myself : </p>
+    
+           <p id="demo3"></p>
+        <script>
+        var person = {
+            firstName : "Jingsha",
+            lastName  : "Luo",
+            age       : 22,
+            major     : "IT"
+            
+        };
+       document.getElementById("demo3").innerHTML =
+         " I'm "+ person.firstName + " ~ " + " now " + person.age + " age "+" and "+ person.major+" major ";
+         document.getElementById("demo3").style.color="red";
+       </script>
+    
+
+
+        <h1> May I Have Your Name ?</h1>
+          <button onclick="myFunction()"> Click Here ~ </button>
+           <p id="demo4"></p>
+            <script>
+          function myFunction(){
+               var x;
+                var person=prompt(" Put on your Name "," jingsha ");
+                if (person!=null && person!=""){
+              x=" Hello " + person + "! How are you today ?";
+              document.getElementById("demo4").innerHTML=x;
+              }
+          }
+        </script>  
+<br>
+
+     <h2> What's Your Plan for Today ?</h2>
+    </p>     
+<div id="myDIV" class="header">
+    <h2 style="margin:5px">My To Do List</h2>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+  
+  <ul id="myUL">
+    <li>Hit the gym</li>
+    <li class="checked">Pay bills</li>
+    <li>Read a book</li>
+    <li>Take class</li>
+    <li>Do homework</li>
+  </ul>
+            
+
+
+<hr>
+        <h1>Would you mind share your " 101 things to do before die "</h1>
+        <h2> List : </h2>
+        <ul id="tasks_list"></ul>
+        <form id="new-task">
+            <input id="task" autocomplete="off" autofocus placeholder="New Task" type="text">
+            <input id="submit" type="submit">
+        </form>
+
+       
+<br>
+<br>
+<br>
+   <p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over</div>
+     <script>
+         function mOver(obj){
+           obj.innerHTML="Thank You"
+      }
+        function mOut(obj){
+           obj.innerHTML="Mouse Over "
+      }
+      
+     </script>
+     </p>   
+
+    </body>
+</html>
