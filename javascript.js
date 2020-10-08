@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("button1").onclick = inc;
 })
+/*
 let counter = 0;
 function inc() {
     // update the variable by one.
@@ -28,7 +29,7 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
-
+*/
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
